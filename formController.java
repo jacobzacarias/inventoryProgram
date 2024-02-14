@@ -74,5 +74,55 @@ public class FormScreenController implements Initializable {
     }
 
 
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle){
+        partTableView.setItems(Inventory.getAllParts());
+        productTableView.setItems(Inventory.getAllProducts());
+
+        partID.setCellValueFactory(new PropertyValueFactory<>("Id"));
+        partName.setCellValueFactory(new PropertyValueFactory<>("Name"));
+        partInvLevel.setCellValueFactory(new PropertyValueFactory<>("Stock"));
+        partCost.setCellValueFactory(new PropertyValueFactory<>("Price"));
+
+        partTableView.setPlaceholder(new Label("No parts in the system."));
+
+        productID.setCellValueFactory(new PropertyValueFactory<>("Id"));
+        productName.setCellValueFactory(new PropertyValueFactory<>("Name"));
+        productInvLevel.setCellValueFactory(new PropertyValueFactory<>("Stock"));
+        productCost.setCellValueFactory(new PropertyValueFactory<>("Price"));
+
+        productTableView.setPlaceholder(new Label("No products in the system."));
+    }
+
+    @FXML
+    void modifyProductButton(MouseEvent event) throws IOException {
+                Product modifySelectedProduct = (Product) productTableView.getSelectionModel().getSelectedItem();
+                if (Inventory.getAllProducts().isEmpty()) {
+                    showAlert("There are no products in the system to modify.");
+                    return;
+                } else if (modifySelectedProduct == null) {
+                    showAlert("Please select a product to modify.");
+                } else {
+                    FXMLLoader loader = new FXMLLoader(getClass().getResource("../view/modifyProductScreen.fxml"));
+                    ModifyProductController controller = new ModifyProductController(modifySelectedProduct);
+                    loader.setController(controller);
+                    Parent parent = loader.load();
+
+                    Stage primaryStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                    primaryStage.hide();
+                    primaryStage.setScene(new Scene(parent));
+                    primaryStage.setTitle("Modify Product Form");
+                    primaryStage.setResizable(false);
+                    primaryStage.show();
+                }
+    }
+            private void showAlert(String message) {
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setTitle("Information");
+                alert.setHeaderText(null);
+                alert.setContentText(message);
+                alert.showAndWait();
+        }
+    }
 
 
