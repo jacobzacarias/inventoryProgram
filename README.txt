@@ -3,8 +3,6 @@ Desktop Schedule README
 Desktop Schedule
 made in Java
 by Jacob Zacarias
-Student ID: 010708306
-Email: jzacar5@wgu.edu
 Student Application Version: QAM2
 Date: 15 May 2024
 
