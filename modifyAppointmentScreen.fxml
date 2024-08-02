@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="491.0" prefWidth="287.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="zacarias.desktopSchedule.controller.ModifyAppointmentController">
+    <children>
+        <Label layoutX="99.0" layoutY="8.0" text="Modify Appointment" />
+        <Label layoutX="24.0" layoutY="44.0" text="ID" />
+        <Label layoutX="24.0" layoutY="78.0" text="Title" />
+        <Label layoutX="24.0" layoutY="111.0" text="Type" />
+        <Label layoutX="24.0" layoutY="147.0" text="Description" />
+        <Label layoutX="24.0" layoutY="388.0" text="User ID" />
+        <Label layoutX="24.0" layoutY="424.0" text="Contact" />
+        <Label layoutX="24.0" layoutY="353.0" text="Customer" />
+        <Label layoutX="24.0" layoutY="182.0" text="Location" />
+        <Label layoutX="24.0" layoutY="217.0" text="Start Date" />
+        <Label layoutX="24.0" layoutY="285.0" text="End Date" />
+        <Label layoutX="24.0" layoutY="319.0" text="End Time" />
+        <Label layoutX="24.0" layoutY="251.0" text="Start Time" />
+        <Button fx:id="modifyAppointmentSave" layoutX="125.0" layoutY="455.0" mnemonicParsing="false" onAction="#modifyAppointmentSave" text="Save" />
+        <Button fx:id="modifyAppointmentCancel" layoutX="178.0" layoutY="455.0" mnemonicParsing="false" onAction="#modifyAppointmentCancel" text="Cancel" />
+        <TextField fx:id="modifyAppointmentTitleField" layoutX="102.0" layoutY="72.0" />
+        <TextField fx:id="modifyAppointmentTypeField" layoutX="102.0" layoutY="107.0" />
+        <TextField fx:id="modifyAppointmentDescriptionField" layoutX="102.0" layoutY="142.0" />
+        <TextField fx:id="modifyAppointmentLocationField" layoutX="102.0" layoutY="177.0" />
+        <DatePicker fx:id="modifyAppointmentStartDate" layoutX="103.0" layoutY="211.0" prefHeight="26.0" prefWidth="160.0" />
+        <ComboBox fx:id="modifyAppointmentStartCombo" layoutX="103.0" layoutY="245.0" prefHeight="26.0" prefWidth="160.0" />
+        <DatePicker fx:id="modifyAppointmentEndDate" layoutX="103.0" layoutY="279.0" prefHeight="26.0" prefWidth="160.0" />
+        <ComboBox fx:id="modifyAppointmentEndCombo" layoutX="103.0" layoutY="314.0" prefHeight="26.0" prefWidth="160.0" />
+        <ComboBox fx:id="modifyAppointmentCustomerCombo" layoutX="103.0" layoutY="348.0" prefHeight="26.0" prefWidth="160.0" />
+        <ComboBox fx:id="modifyAppointmentContactCombo" layoutX="103.0" layoutY="417.0" prefHeight="26.0" prefWidth="160.0" />
+        <ComboBox fx:id="modifyAppointmentUserIdCombo" layoutX="103.0" layoutY="382.0" prefHeight="26.0" prefWidth="160.0" />
+        <TextField fx:id="modifyAppointmentId" disable="true" editable="false" layoutX="102.0" layoutY="39.0" text="Auto Gen - Disabled" />
+    </children>
+</AnchorPane>
