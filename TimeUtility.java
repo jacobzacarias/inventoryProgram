@@ -25,18 +25,6 @@ public class TimeUtility {
     }
 
     /**
-     * Gets start times.
-     *
-     * @return start times
-     */
-    public static ObservableList<LocalTime> getStartTimes() {
-        if (startTimes.isEmpty()) {
-            initializeTimeLists();
-        }
-        return startTimes;
-    }
-
-    /**
      * Gets end times.
      *
      * @return end times
