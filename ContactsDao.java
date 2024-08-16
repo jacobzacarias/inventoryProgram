@@ -55,6 +55,7 @@ public class ContactsDao {
                     .collect(Collectors.toCollection(FXCollections::observableArrayList));
 
             contact = list.get(0);
+            
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
