@@ -2,6 +2,7 @@ package zacarias.desktopSchedule.DAO;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+
 import zacarias.desktopSchedule.helper.JDBC;
 
 import zacarias.desktopSchedule.model.Countries;
