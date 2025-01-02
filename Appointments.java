@@ -1,6 +1,7 @@
 package zacarias.desktopSchedule.model;
 
 import javafx.collections.FXCollections;
+
 import javafx.collections.ObservableList;
 import zacarias.desktopSchedule.DAO.AppointmentDao;
 
